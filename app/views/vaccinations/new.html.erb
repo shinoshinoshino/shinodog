@@ -1,0 +1,32 @@
+<h4><i class="fas fa-syringe"></i>接種日を追加する<br><a style="color:red; font-weight:normal;">半角で入力してください</a></h4>
+
+<%= form_for :vaccination, url: vaccinations_path do |f| %>
+
+<div class="field vaccination-field">
+  <%= f.label :狂犬病 %><br>
+  <%= f.text_field :rabies, placeholder: "例)2019/1/1", :class => 'form-control form-vaccination' %>
+</div>
+
+<div class="field vaccination-field">
+  <%= f.label :混合ワクチン %><br>
+  <%= f.text_field :vaccine, placeholder: "例)2019/1/1", :class => 'form-control form-vaccination' %>
+</div>
+
+<div class="field vaccination-field">
+  <%= f.label :フィラリア %><br>
+  <%= f.text_field :filaria, placeholder: "例)2019/1/1", :class => 'form-control form-vaccination' %>
+</div>
+
+<div class="field vaccination-field">
+  <%= f.label :ノミ・ダニ %><br>
+  <%= f.text_field :flea, placeholder: "例)2019/1/1", :class => 'form-control form-vaccination' %>
+</div>
+
+<div class="actions">
+  <%= f.submit '登録する', :class=>'btn-primary' %>
+</div>
+
+<div class="return">
+  <a><%= link_to 'もどる', vaccinations_path, class: "square_btn" %></a>
+</div>
+<% end %>

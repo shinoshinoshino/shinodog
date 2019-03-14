@@ -1,0 +1,40 @@
+<h3>新規登録(無料)</h3>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <p><%= f.label :nickname,'ニックネーム' %><br />
+    <%= f.text_field :nickname, :class=>'form-control' %></p>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :email,'メールアドレス' %><br />
+    <%= f.email_field :email, class: 'form-control' %></p>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :password,'パスワード(6文字以上でご入力ください)' %><br/>
+    <!--<% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />-->
+    <%= f.password_field :password, class: 'form-control' %></p>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :password_confirmation,'パスワード(もう一度ご入力ください)' %><br />
+    <%= f.password_field :password_confirmation, class: 'form-control' %><p>
+  </div>
+
+  <div class="actions">
+    <%= f.submit '登録する', :class=>'btn-primary' %>
+  </div>
+
+  <div class="return">
+    <a><%= link_to 'もどる', "/", class: "square_btn" %></a>
+  </div>
+
+
+<% end %>
+
+<!--<%= render "devise/shared/links" %>-->

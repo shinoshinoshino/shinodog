@@ -1,0 +1,39 @@
+<div class="inindex">
+
+<div class="cursor">
+  <ul class="index_list">
+   <li class="index_list_1"><%= link_to posts_path do %>体重測定<br><i class="fas fa-weight"></i></li><% end %>
+   <li class="index_list_2"><%= link_to vaccinations_path do %>予防接種<br><i class="fas fa-syringe"></i></li><% end %>
+   <li class="index_list_3"><%= link_to medicines_path do %>投薬状況<br><i class="fas fa-capsules"></i></li><% end %>
+   <li class="index_list_4"><%= link_to friends_path do %>お友だち<br><i class="fas fa-user-friends"></i></li><% end %>
+   <li class="index_list_5"><%= link_to profiles_path do %>愛犬紹介<br><i class="fas fa-bone"></i></li><% end %>
+  </ul>
+</div>
+
+<p class="hitokoto"><i class="fas fa-weight"></i>今日も、愛犬の体重測定から始めましょう</p>
+
+<div class="sokutei">
+  <%= link_to "測定する", new_post_path, class: "btn-primary" %>
+</div>
+
+
+<table class="index_table"　border="1">
+  <tr>
+    <th>測定日</th>
+    <th>犬の名前</th>
+    <th>体重(Kg)</th>
+    <th></th>
+  </tr>
+  <% @posts.each do |post| %>    　
+  <tr>
+    <td><%= post.date %></td>
+    <td><%= post.profile.name %></td>
+    <td><%= post.weight %></td>
+    <td><%= link_to '削除する', post_path(post.id) , method: :delete, class: "square_btn_sm", data: { confirm: '本当に削除しますか？' } %></td>
+  </tr>
+  <% end %>
+
+</table>
+
+
+</div>

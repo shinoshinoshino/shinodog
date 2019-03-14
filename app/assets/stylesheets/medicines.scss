@@ -1,0 +1,178 @@
+// Place all the styles related to the Medicines controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.inindex {
+  position: relative;
+}
+ul.index_list {
+    display: flex;
+    background-color: white;
+    justify-content: flex-start;
+    width: 100%;
+    height: 60px;
+    margin: 30px auto;
+    padding-left: 0px;
+}
+
+.index_list li {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.medicine_index_list_3 {
+    border-right: solid 1px #e6e6e6;
+    border-bottom: solid 1px darkorange;
+    background-color: #e6e6e6;
+}
+
+.medicine_index_list_1 {
+    border-right: solid 1px #e6e6e6;
+    border-bottom: solid 1px #e6e6e6;
+}
+
+.medicine_index_list_2 {
+    border-right: solid 1px #e6e6e6;
+    border-bottom: solid 1px #e6e6e6;
+}
+
+.medicine_index_list_4 {
+    border-right: solid 1px #e6e6e6;
+    border-bottom: solid 1px #e6e6e6;
+}
+
+.medicine_index_list_5 {
+    border-bottom: solid 1px #e6e6e6;
+    border-right: solid 1px rgba(230, 230, 230, 0);
+}
+
+.index_list a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  color: #663800;
+}
+.index_list i {
+  color: #663800;
+}
+/*.index_list_1 a {
+  margin-top: -11px;
+}
+.index_list_1 i {
+  margin-top: 10px;
+}*/
+
+.index_list li:hover {
+  background-color: #e6e6e6;
+  border-bottom: solid 1px darkorange;
+}
+.index_list:hover li:not(:hover) {
+  background-color: white;
+  border-bottom: solid 1px #e6e6e6;
+}
+.hitokoto {
+  color: darkorange;
+  font-size: 16px;
+}
+
+.sokutei {
+  margin-left: 40%;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.3em 1em;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  border: solid 2px #0080ff;
+  background: #0080ff;
+  border-radius: 3px;
+  transition: .4s;
+ }
+
+.btn-primary:hover {
+    background: #00d5ff;
+    color: #0080ff;
+}
+
+.square_btn_sm {
+    display: inline-block;
+    padding: 0px 3px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #0080ff;
+    border: solid 2px #0080ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.square_btn_sm:hover {
+    background: #0080ff;
+    color: white;
+}
+
+table.medicine_index_table {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-collapse: collapse;
+  margin: 0px auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+table.medicine_index_table th, table.medicine_index_table td  {
+  border: solid 1px #cccccc;
+  color: #663800;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table th {
+  background-color: #e6e6e6;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.medicine_table th:first-of-type {
+ width: 40%;
+}
+.medicine_table th:nth-of-type(2) {
+ width: 30%;
+}
+.medicine_table th:nth-of-type(3) {
+ width: 30%;
+}
+
+.field input {
+  font-size: 18px;
+  padding: 2px;
+  background-color: #fff;
+  border-color: darkorange;
+  text-align: center;
+}
+
+.medicine-field {
+  margin-bottom: 20px;
+}
+
+.delete {
+  margin-top: 20px;
+}

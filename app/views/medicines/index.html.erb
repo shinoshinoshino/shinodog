@@ -1,0 +1,36 @@
+<div class="inindex">
+
+<div class="cursor">
+  <ul class="index_list">
+   <li class="medicine_index_list_1"><%= link_to posts_path do %>体重測定<br><i class="fas fa-weight"></i></li><% end %>
+   <li class="medicine_index_list_2"><%= link_to vaccinations_path do %>予防接種<br><i class="fas fa-syringe"></i></li><% end %>
+   <li class="medicine_index_list_3"><%= link_to medicines_path do %>投薬状況<br><i class="fas fa-capsules"></i></li><% end %>
+   <li class="medicine_index_list_4"><%= link_to friends_path do %>お友だち<br><i class="fas fa-user-friends"></i></li><% end %>
+   <li class="medicine_index_list_5"><%= link_to profiles_path do %>愛犬紹介<br><i class="fas fa-bone"></i></li><% end %>
+  </ul>
+</div>
+
+<p class="hitokoto"><i class="fas fa-capsules"></i>処方されたお薬一覧</p>
+
+<div class="sokutei">
+  <%= link_to "お薬登録", new_medicine_path, class: "btn-primary" %>
+</div>
+
+<table class="medicine_index_table"　border="1">
+  <tr>
+    <th>投薬日</th>
+    <th>病名・薬名</th>
+    <th>患者(犬)</th>
+    <th></th>
+  </tr>
+    <% @medicines.each do |medicine| %>
+  <tr>
+    <td><%= medicine.date %></td>
+    <td><%= medicine.drug %></td>
+    <td><%= medicine.profile.name %></td>
+    <td><%= link_to '編集する', edit_medicine_path(medicine.id), class: "square_btn_sm" %></td>
+  </tr>
+  <% end %>
+
+</table>
+</div>

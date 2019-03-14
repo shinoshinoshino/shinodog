@@ -1,0 +1,42 @@
+<h4><i class="fas fa-user-friends"></i>お友達を追加する</h4>
+
+<%= form_for :friend, url: friends_path do |f| %>
+<div class="field friend-field">
+  <%= f.label :犬の名前 %><br>
+  <%= f.text_field :name, :class => 'form-control form-friend-1' %>
+</div>
+
+<div class="field friend-field">
+  <%= f.label :性別 %><br>
+  <%= f.select :gender, [['オス', 'オス'], ['メス', 'メス']], :class => 'form-control form-friend-2' %>
+</div>
+
+<div class="field friend-field">
+  <%= f.label :犬種 %><br>
+  <%= f.text_field :breed, :class => 'form-control form-friend-3' %>
+</div>
+
+<div class="field friend-field">
+  <%= f.label :飼い主 %><br>
+  <%= f.text_field :owner, placeholder: "例)山田さん、ひとみちゃん", :class => 'form-control form-friend-4' %>
+</div>
+
+<div class="field friend-field">
+  <%= f.label :毛色 %><br>
+  <%= f.text_field :coat, placeholder: "例)茶", :class => 'form-control form-friend-5' %>
+</div>
+
+<div class="field friend-field">
+  <%= f.label :特徴 %><br>
+  <%= f.text_area :feature, placeholder: "例)飼い主さんの特徴、ワンちゃんの服・首輪など", :class => 'form-control form-friend-6' %>
+</div>
+
+<div class="actions">
+  <%= f.submit '登録する', :class=>'btn-primary' %>
+</div>
+
+<div class="return">
+  <a><%= link_to 'もどる', friends_path, class: "square_btn" %></a>
+</div>
+
+<% end %>

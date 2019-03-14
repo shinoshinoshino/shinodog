@@ -1,0 +1,47 @@
+<div class="inindex">
+
+<div class="cursor">
+  <ul class="index_list">
+   <li class="friend_index_list_1"><%= link_to posts_path do %>体重測定<br><i class="fas fa-weight"></i></li><% end %>
+   <li class="friend_index_list_2"><%= link_to vaccinations_path do %>予防接種<br><i class="fas fa-syringe"></i></li><% end %>
+   <li class="friend_index_list_3"><%= link_to medicines_path do %>投薬状況<br><i class="fas fa-capsules"></i></li><% end %>
+   <li class="friend_index_list_4"><%= link_to friends_path do %>お友だち<br><i class="fas fa-user-friends"></i></li><% end %>
+   <li class="friend_index_list_5"><%= link_to profiles_path do %>愛犬紹介<br><i class="fas fa-bone"></i></li><% end %>
+  </ul>
+</div>
+
+<p class="hitokoto"><i class="fas fa-user-friends"></i>お知り合いになったワンちゃんのリスト</p>
+
+<div class="sokutei">
+  <%= link_to "新規登録", new_friend_path, class: "btn-primary" %>
+</div>
+
+<table class="friend_index_table"　border="1">
+  <tr>
+    <th style="color:darkorange">犬の名前</th>
+    <th>性別</th>
+    <th>飼い主</th>
+    <th rowspan="2">特徴</th>
+    <th rowspan="2"></th>
+  </tr>
+  <tr>
+    <th colspan="2">犬 種</th>
+    <th>毛色</th>
+  </tr>
+  <% @friends.each do |friend| %>    　
+  <tr style="border-top: solid 2px #b3b3b3;">
+    <td style="color:darkorange"><%= friend.name %></td>
+    <td><%= friend.gender %></td>
+    <td><%= friend.owner %></td>
+    <td rowspan="2"><%= friend.feature %></td>
+    <td><%= link_to '編集する', edit_friend_path(friend.id), class: "square_btn_sm" %></td>
+    </tr>
+  <tr>
+    <td colspan="2"><%= friend.breed %></td>
+    <td><%= friend.coat %></td>
+    <td><%= link_to '削除する', friend_path(friend.id), method: :delete, class: "square_btn_sm", data: { confirm: '本当に削除しますか？' } %></td>
+  </tr>
+  <% end %>
+
+</table>
+</div>

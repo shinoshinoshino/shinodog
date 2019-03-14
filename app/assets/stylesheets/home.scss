@@ -1,0 +1,213 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header, .header_grobal, .footer {
+  display: flex;
+  height: 24px;
+  margin: 0px;
+  padding: 0px;
+  justify-content: flex-end;
+  background-color: #ffba66;
+}
+
+.signup, .login {
+  display: inline;
+  float: right;
+  background-color: #ffba66;
+}
+
+.signup a {
+  color: #0080ff;
+  text-decoration: none;
+}
+
+.header_grobal li:hover {
+  background-color: darkorange;
+}
+
+.header_grobal a:hover {
+  color: #0080ff;
+}
+
+.header_grobal span {
+  display: inline-block;
+  color: white;
+  line-height: 28px;
+  font-size: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.login a {
+  color:  #0080ff;
+  text-decoration: none;
+  padding-left: 0px;
+  padding-right: 24.4px;
+}
+
+.header_main {
+  text-align: left;
+}
+.header_main a {
+  color: darkorange;
+  font-size: 28px;
+  text-align: left;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.header_img img {
+  width: 80%;
+}
+
+.return {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.return a {
+  color: #0080ff;
+  text-decoration: none;
+}
+
+.name {
+  margin-top: 20px;
+}
+
+.field {
+  color: #663800;
+}
+
+.form-control {
+  width: 300px;
+  border: 1px solid darkorange;
+  border-radius: 10px;
+  height: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.3em 1em;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  border: solid 2px #0080ff;
+  background: #0080ff;
+  border-radius: 3px;
+  transition: .4s;
+ }
+
+.btn-primary:hover {
+    background: #00d5ff;
+    color: #0080ff;
+}
+
+h3,p {
+  color: #663800;
+}
+
+.header_lead {
+  color: darkorange;
+  font-size: 22px;
+}
+
+hr {
+  border: 0.5px solid darkorange;
+}
+
+.header_log {
+  background-color: #fffcf9;
+  background-position: center;
+  border: 2px solid darkorange;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 70px;
+  max-width: 600px;
+}
+.header_show {
+  display: flex;
+  justify-content: space-around;
+  max-width: 700px;
+  height: 100px;
+  padding: 0px;
+  margin: 10px auto;
+  /*vertical-align: baseline;
+  background-color: white;*/
+}
+
+.header_show li {
+  display: inline-block;
+  width: 45%;
+  height: 70px;
+  margin: 15px auto;
+  padding: 5px;
+  background-color: white;
+  border: solid 1px darkorange;
+  border-radius: 4px;
+}
+
+.header_show li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color:  #0080ff;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 17px;
+  line-height: 58px;
+}
+
+.header_show li:hover {
+  background-color: #fff7ef;
+}
+
+.header_heading {
+  color: #663800;
+  font-size: 20px;
+  max-width: 700px;
+  line-height: 60px;
+  margin: 0 auto;
+  border-bottom: 2px solid darkorange;
+  border-top: 2px solid darkorange;
+}
+
+.header_point {
+  flex-direction: column;
+  padding: 0;
+}
+
+.header_point li {
+  /*display: inline-block;*/
+  max-width: 700px;
+  height: 40px;
+  margin: 15px auto;
+  padding: 5px;
+  text-align: left;
+  background-color: #e6e6e6;
+  border: solid 1px #e6e6e6;
+  border-radius: 4px;
+}
+
+.header_point a {
+  margin-left: 15%;
+}
+.header_point span {
+  display: inline-block;
+  color: #663800;
+  text-decoration: none;
+  line-height: 28px;
+  text-align: left;
+  vertical-align: baseline;
+}
+
+h5 {
+  color: red;
+  font-size: 16px;
+}
+
+.footer {
+  margin-top: 50px;
+}

@@ -1,0 +1,80 @@
+<h4><i class="fas fa-bone"></i>愛犬を編集する</h4>
+
+<%= form_for @profile, url: profile_path(@profile) do |f| %>
+<div class="field profile-field">
+  <%= f.label :名前 %><br>
+  <%= f.text_field :name, :class => 'form-control form-profile-1' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :生年月日 %><a style="color:red;">：半角で入力してください</a><br>
+  <%= f.text_field :birthday, placeholder: "例)2019/1/1", :class => 'form-control form-profile-2' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :性別 %><br>
+  <%= f.select :gender, [['オス', 'オス'], ['メス', 'メス']], :class => 'form-control form-profile-3' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :出生体重 %><br>
+  <%= f.number_field :birthweight, placeholder: "例)3.5", step: "0.01", :class => 'form-control form-profile-4' %>Kg
+</div>
+
+<div class="field profile-field">
+  <%= f.label :出生地 %><br>
+  <%= f.text_field :birthplace, :class => 'form-control form-profile-5' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :散歩量 %><br>
+  <%= f.text_field :walk, placeholder: "例)朝30分　夕30分", :class => 'form-control form-profile-6' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :好物 %><br>
+  <%= f.text_field :food, placeholder: "例)りんご", :class => 'form-control form-profile-7' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :芸 %><br>
+  <%= f.text_field :trick, placeholder: "例)ふせ", :class => 'form-control form-profile-8' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :性格 %><br>
+  <%= f.text_area :character, placeholder: "例)人懐っこい", :class => 'form-control form-profile-9' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :現病歴 %><br>
+  <%= f.text_area :illness, placeholder: "例)糖尿病", :class => 'form-control form-profile-10' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :既往歴 %><br>
+  <%= f.text_area :history, placeholder: "例)アトピー", :class => 'form-control form-profile-11' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :検査記録 %><br>
+  <%= f.text_area :test, placeholder: "例)MRI", :class => 'form-control form-profile-12' %>
+</div>
+
+<div class="field profile-field">
+  <%= f.label :手術記録 %><br>
+  <%= f.text_area :operation, placeholder: "例)去勢", :class => 'form-control form-profile-13' %>
+</div>
+
+<div class="actions">
+  <%= f.submit '登録する', :class=>'btn-primary' %>
+</div>
+
+<div class="delete">
+  <%= link_to '削除する', profile_path(@profile.id), method: :delete, class: 'btn-primary', data: { confirm: '本当に削除しますか？' } %>
+</div>
+
+<div class="return">
+  <a><%= link_to 'もどる', profiles_path, class: "square_btn" %></a>
+</div>
+<% end %>

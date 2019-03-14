@@ -1,0 +1,38 @@
+<div class="inindex">
+
+<div class="cursor">
+  <ul class="index_list">
+   <li class="vaccination_index_list_1"><%= link_to posts_path do %>体重測定<br><i class="fas fa-weight"></i></li><% end %>
+   <li class="vaccination_index_list_2"><%= link_to vaccinations_path do %>予防接種<br><i class="fas fa-syringe"></i></li><% end %>
+   <li class="vaccination_index_list_3"><%= link_to medicines_path do %>投薬状況<br><i class="fas fa-capsules"></i></li><% end %>
+   <li class="vaccination_index_list_4"><%= link_to friends_path do %>お友だち<br><i class="fas fa-user-friends"></i></li><% end %>
+   <li class="vaccination_index_list_5"><%= link_to profiles_path do %>愛犬紹介<br><i class="fas fa-bone"></i></li><% end %>
+  </ul>
+</div>
+
+<p class="hitokoto"><i class="fas fa-syringe"></i>定期的に接種して予防に努めましょう</p>
+
+<div class="sokutei">
+  <%= link_to "接種日追加", new_vaccination_path, class: "btn-primary" %>
+</div>
+
+<table class="vaccination_index_table"　border="1">
+  <tr>
+    <th>狂犬病</th>
+    <th>ワクチン</th>
+    <th>フィラリア</th>
+    <th>ノミ・ダニ</th>
+    <th></th>
+  </tr>
+  <% @vaccinations.each do |vaccination| %>    　
+  <tr>
+    <td><%= vaccination.rabies %></td>
+    <td><%= vaccination.vaccine %></td>
+    <td><%= vaccination.filaria %></td>
+    <td><%= vaccination.flea %></td>
+    <td><%= link_to '編集する', edit_vaccination_path(vaccination.id), class: "square_btn_sm_vaccination"  %></td>
+  </tr>
+  <% end %>
+
+</table>
+</div>

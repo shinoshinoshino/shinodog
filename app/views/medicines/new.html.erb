@@ -1,0 +1,33 @@
+<h4><i class="fas fa-bone"></i>お薬を追加する</h4>
+
+<%= form_for :medicine, url: medicines_path do |f| %>
+
+<div class="field medicine-field">
+  <%= f.label :投薬日 %><br>
+  <%= f.date_select :date, :use_month_numbers => true, :start_year =>2010, :end_year =>2030, :date_separator => "/", :size => 1000, :class => 'form-control medicine-2' %>
+  <% if @medicine.errors.messages[:date].any? %>
+  <h5 style="font-size:20px;">投薬日を入れてください</h5>
+  <% end %>
+</div>
+
+<div class="field medicine-field">
+  <%= f.label :診断名・処方されたお薬 %><br>
+  <%= f.text_field :drug, :class => 'form-control form-medicine-1' %>
+  <% if @medicine.errors.messages[:drug].any? %>
+  <h5 style="font-size:20px; margin-top:10px;">病名・お薬を入れてください</h5>
+  <% end %>
+</div>
+
+<div class="field medicine-field">
+  <%= f.label :登録した愛犬を選択してください %><br>
+  <%= f.collection_select :profile_id, @profiles, :id, :name, :class => 'form-control form-medicine-1' %>
+</div>
+
+<div class="actions">
+  <%= f.submit '登録する', :class=>'btn-primary' %>
+</div>
+
+<div class="return">
+  <a><%= link_to 'もどる', medicines_path, class: "square_btn" %></a>
+</div>
+<% end %>

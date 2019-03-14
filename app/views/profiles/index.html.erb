@@ -1,0 +1,100 @@
+<div class="inindex">
+
+<div class="cursor">
+  <ul class="index_list">
+   <li class="profile_index_list_1"><%= link_to posts_path do %>体重測定<br><i class="fas fa-weight"></i></li><% end %>
+   <li class="profile_index_list_2"><%= link_to vaccinations_path do %>予防接種<br><i class="fas fa-syringe"></i></li><% end %>
+   <li class="profile_index_list_3"><%= link_to medicines_path do %>投薬状況<br><i class="fas fa-capsules"></i></li><% end %>
+   <li class="profile_index_list_4"><%= link_to friends_path do %>お友だち<br><i class="fas fa-user-friends"></i></li><% end %>
+   <li class="profile_index_list_5"><%= link_to profiles_path do %>愛犬紹介<br><i class="fas fa-bone"></i></li><% end %>
+  </ul>
+</div>
+
+<p class="hitokoto"><i class="fas fa-bone"></i>ワンちゃん達のプロフィール</p>
+
+<div class="sokutei">
+  <%= link_to "愛犬登録", new_profile_path, class: "btn-primary" %>
+</div>
+
+<table class="profile_index_table"　border="1">
+  <tr>
+    <td>名 前</td>
+    <% @profiles.each do |profile| %>
+    <td style="color:darkorange"><%= profile.name %>  <%= link_to '編集する', edit_profile_path(profile.id), class: "square_btn_sm" %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>生年月日</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.birthday %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>性 別</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.gender %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>出生体重</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.birthweight %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>出生地</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.birthplace %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>散歩量</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.walk %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>好 物</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.food %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>芸</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.trick %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>性 格</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.character %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>現病歴</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.illness %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>既往歴</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.history %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>検査記録</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.test %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>手術記録</td>
+    <% @profiles.each do |profile| %>
+    <td><%= profile.operation %></td>
+    <% end %>
+  </tr>
+
+</table>
+</div>
