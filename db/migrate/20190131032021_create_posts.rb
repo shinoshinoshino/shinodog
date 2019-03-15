@@ -7,7 +7,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    
+  end  
+
     def down
       create_table :posts do |t|
         t.date :date
@@ -16,5 +17,5 @@ class CreatePosts < ActiveRecord::Migration[5.2]
 
         t.timestamps
       end
-  end
+    end
 end
