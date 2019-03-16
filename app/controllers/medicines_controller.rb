@@ -1,4 +1,6 @@
 class MedicinesController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @medicines = Medicine.all.order(created_at: 'desc')
   end
