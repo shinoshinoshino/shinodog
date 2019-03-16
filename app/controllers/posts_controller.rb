@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = current_user.post.new
+    @post = current_user.posts.new
     @profiles = Profile.all
   end
 
