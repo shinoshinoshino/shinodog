@@ -2,7 +2,7 @@ class VaccinationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @vaccinations = current_user.vaccination.all.order(created_at: 'desc')
+    @vaccinations = Vaccination.all.order(created_at: 'desc')
   end
 
   def new
@@ -15,18 +15,18 @@ class VaccinationsController < ApplicationController
   end
 
   def destroy
-    @vaccination = current_user.vaccination.find(params[:id])
+    @vaccination = Vaccination.find(params[:id])
     @vaccination.destroy
     redirect_to vaccinations_path
   end
 
   def edit
-    @vaccination = current_user.vaccination.find(params[:id])
+    @vaccination = Vaccination.find(params[:id])
   end
 
   def update
-    @vaccination = current_user.vaccination.find(params[:id])
-    @vaccination.update(current_user.vaccination_params)
+    @vaccination = Vaccination.find(params[:id])
+    @vaccination.update(vaccination_params)
     redirect_to vaccinations_path
   end
 
