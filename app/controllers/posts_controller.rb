@@ -2,11 +2,11 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = current_user.post.all.order(created_at: 'desc')
+    @posts = Post.all.order(created_at: 'desc')
   end
 
   def new
-    @post = Post.new
+    @post = current_user.post.new
     @profiles = Profile.all
   end
 
