@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @profiles = Profile.all
+    @profiles = current_user.profile
   end
 
   def new
