@@ -9,7 +9,7 @@ class VaccinationsController < ApplicationController
   end
 
   def create
-    @vaccination = current_user.vaccination.new(vaccination_params)
+    @vaccination = Vaccination.new(vaccination_params)
     @vaccination.save
     redirect_to vaccinations_path
   end
@@ -26,7 +26,7 @@ class VaccinationsController < ApplicationController
 
   def update
     @vaccination = current_user.vaccination.find(params[:id])
-    @vaccination.update(vaccination_params)
+    @vaccination.update(current_user.vaccination_params)
     redirect_to vaccinations_path
   end
 
