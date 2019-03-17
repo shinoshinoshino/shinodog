@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @profiles = current_user.profiles.all
+    @profiles = Profiles.all
   end
 
   def new
@@ -32,7 +32,7 @@ class ProfilesController < ApplicationController
 
   private
     def profile_params
-      params.require(:profile).permit(:name, :birthday, :gender, :birthweight, :birthplace, :walk, :food, :trick, :character, :operation, :test, :history, :illness)
+      params.require(:profile).permit(:name, :birthday, :gender, :birthweight, :birthplace, :walk, :food, :trick, :character, :operation, :test, :history, :illness, :user_id)
     end
 
 end
