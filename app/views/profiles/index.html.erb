@@ -20,7 +20,7 @@
   <tr>
     <td>名 前</td>
     <% @profiles.each do |profile| %>
-    <td style="color:darkorange"><%= current_user.profile.name %>  <%= link_to '編集する', edit_profile_path(profile.id), class: "square_btn_sm" %></td>
+    <td style="color:darkorange"><%= profile.name %>  <%= link_to '編集する', edit_profile_path(profile.id), class: "square_btn_sm" %></td>
     <% end %>
   </tr>
   <tr>
