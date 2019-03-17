@@ -5,17 +5,20 @@
 <div class="field">
   <%= f.label :登録した愛犬を選択してください %><br>
   <%= f.collection_select :profile_id, @profiles, :id, :name %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field">
   <%= f.label :測定した日 %><br>
   <%= f.date_select :date, :use_month_numbers => true, :start_year =>2010, :end_year =>2030, :date_separator => "/", :size => 1000, :class => 'form-control form-date' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 
 <div class="field field-weight">
   <%= f.label :体重を入れてください %><br>
   <%= f.number_field :weight, placeholder: "例)3.5", step: "0.01", class: 'form-control form-weight' %><a>Kg</a>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <% if @post.errors.messages[:weight].any? %>
   <h5 style="font-size:20px;">体重を入れてください</h5>
   <% end %>
