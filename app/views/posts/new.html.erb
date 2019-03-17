@@ -4,7 +4,7 @@
 
 <div class="field">
   <%= f.label :登録した愛犬を選択してください %><br>
-  <%= f.collection_select :profile_id, @profiles, :id, :name %>
+  <%= f.collection_select :current_user.profile_id, @profiles, :id, :name %>
   <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
