@@ -11,8 +11,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @profiles = Profile.all
+    @post = current_user.posts.new(post_params)
+    @profiles = current_user.profile.sall
     if @post.save
       redirect_to posts_path
     else
@@ -21,8 +21,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @profiles = Profile.all
+    @post = current_user.posts.find(params[:id])
+    @profiles = current_user.profiles.all
     @post.destroy
     redirect_to posts_path
   end
