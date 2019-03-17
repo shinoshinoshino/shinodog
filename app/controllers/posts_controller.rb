@@ -7,12 +7,12 @@ class PostsController < ApplicationController
 
   def new
     @post = current_user.posts.new
-    @profiles = current_user.profiles.all
+    @profiles = Profile.all
   end
 
   def create
     @post = current_user.posts.new(post_params)
-    @profiles = current_user.profiles.sall
+    @profiles = Profiles.all
     if @post.save
       redirect_to posts_path
     else
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post = current_user.posts.find(params[:id])
-    @profiles = current_user.profiles.all
+    @profiles = Profile.all
     @post.destroy
     redirect_to posts_path
   end
