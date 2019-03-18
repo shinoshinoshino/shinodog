@@ -26,7 +26,7 @@
   </tr>
   <% @posts.each do |post| %>    　
   <tr>
-    <td><%= post.date %></td>
+    <td><%= current_user.posts.date %></td>
     <td><%= post.profile.name %></td>
     <td><%= post.weight %></td>
     <td><%= link_to '削除する', post_path(post.id) , method: :delete, class: "square_btn_sm", data: { confirm: '本当に削除しますか？' } %></td>
