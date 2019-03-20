@@ -5,21 +5,25 @@
 <div class="field vaccination-field">
   <%= f.label :狂犬病 %><br>
   <%= f.text_field :rabies, placeholder: "例)2019/1/1", :class => 'form-control form-vaccination' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field vaccination-field">
   <%= f.label :混合ワクチン %><br>
   <%= f.text_field :vaccine, placeholder: "例)2019/1/1", :class => 'form-control form-vaccination' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field vaccination-field">
   <%= f.label :フィラリア %><br>
   <%= f.text_field :filaria, placeholder: "例)2019/1/1", :class => 'form-control form-vaccination' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field vaccination-field">
   <%= f.label :ノミ・ダニ %><br>
   <%= f.text_field :flea, placeholder: "例)2019/1/1", :class => 'form-control form-vaccination' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="actions">
