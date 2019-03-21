@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   validates :email, presence: true
-  has_many :posts
+  has_many :posts, through: :profiles
   has_many :vaccinations
   has_many :medicines
   has_many :friends
