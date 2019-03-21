@@ -4,56 +4,69 @@
 <div class="field profile-field">
   <%= f.label :名前 %><br>
   <%= f.text_field :name, :class => 'form-control form-profile-1' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field profile-field">
   <%= f.label :生年月日 %><a style="color:red;">：半角で入力してください</a><br>
   <%= f.text_field :birthday, placeholder: "例)2019/1/1", :class => 'form-control form-profile-2' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field profile-field">
   <%= f.label :性別 %><br>
   <%= f.select :gender, [['オス', 'オス'], ['メス', 'メス']], :class => 'form-control form-profile-3' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :出生体重 %><br>
   <%= f.number_field :birthweight, placeholder: "例)3.5", step: "0.01", :class => 'form-control form-profile-4' %>Kg
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :出生地 %><br>
   <%= f.text_field :birthplace, :class => 'form-control form-profile-5' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :散歩量 %><br>
   <%= f.text_field :walk, placeholder: "例)朝30分　夕30分", :class => 'form-control form-profile-6' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :好物 %><br>
   <%= f.text_field :food, placeholder: "例)りんご", :class => 'form-control form-profile-7' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :芸 %><br>
   <%= f.text_field :trick, placeholder: "例)ふせ", :class => 'form-control form-profile-8' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :性格 %><br>
   <%= f.text_area :character, placeholder: "例)人懐っこい", :class => 'form-control form-profile-9' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :現病歴 %><br>
   <%= f.text_area :illness, placeholder: "例)糖尿病", :class => 'form-control form-profile-10' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :既往歴 %><br>
   <%= f.text_area :history, placeholder: "例)アトピー", :class => 'form-control form-profile-11' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :検査記録 %><br>
   <%= f.text_area :test, placeholder: "例)MRI", :class => 'form-control form-profile-12' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 <div class="field profile-field">
   <%= f.label :手術記録 %><br>
   <%= f.text_area :operation, placeholder: "例)去勢", :class => 'form-control form-profile-13' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="actions">
