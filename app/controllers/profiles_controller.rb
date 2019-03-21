@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @profiles = current_user.pofiles.all.order(created_at: 'desc')
+    @profiles = current_user.pofiles.all
   end
 
   def new
