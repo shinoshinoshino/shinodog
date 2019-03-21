@@ -4,31 +4,37 @@
 <div class="field friend-field">
   <%= f.label :犬の名前 %><br>
   <%= f.text_field :name, :class => 'form-control form-friend-1' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field friend-field">
   <%= f.label :性別 %><br>
   <%= f.select :gender, [['オス', 'オス'], ['メス', 'メス']], :class => 'form-control form-friend-2' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field friend-field">
   <%= f.label :犬種 %><br>
   <%= f.text_field :breed, :class => 'form-control form-friend-3' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field friend-field">
   <%= f.label :飼い主 %><br>
   <%= f.text_field :owner, placeholder: "例)山田さん、ひとみちゃん", :class => 'form-control form-friend-4' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field friend-field">
   <%= f.label :毛色 %><br>
   <%= f.text_field :coat, placeholder: "例)茶", :class => 'form-control form-friend-5' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="field friend-field">
   <%= f.label :特徴 %><br>
   <%= f.text_area :feature, placeholder: "例)飼い主さんの特徴、ワンちゃんの服・首輪など", :class => 'form-control form-friend-6' %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 </div>
 
 <div class="actions">
