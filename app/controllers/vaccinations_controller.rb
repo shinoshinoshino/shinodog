@@ -2,7 +2,7 @@ class VaccinationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @vaccinations = current_user.vaccinations.all.order(created_at: 'desc')
+    @vaccinations = current_user.vaccinations.all
   end
 
   def new
