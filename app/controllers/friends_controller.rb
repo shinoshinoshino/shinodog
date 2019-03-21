@@ -9,23 +9,23 @@ class FriendsController < ApplicationController
   end
 
   def create
-    @friend = urrent_user.friends.new(friend_params)
+    @friend = current_user.friends.new(friend_params)
     @friend.save
     redirect_to friends_path
   end
 
   def destroy
-    @friend = urrent_user.friends.find(params[:id])
+    @friend = current_user.friends.find(params[:id])
     @friend.destroy
     redirect_to friends_path
   end
 
   def edit
-    @friend = urrent_user.friends.find(params[:id])
+    @friend = current_user.friends.find(params[:id])
   end
 
   def update
-    @friend = urrent_user.friends.find(params[:id])
+    @friend = current_user.friends.find(params[:id])
     @friend.update(friend_params)
     redirect_to friends_path
   end
