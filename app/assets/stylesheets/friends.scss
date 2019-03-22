@@ -87,10 +87,10 @@ ul.index_list {
 .hitokoto {
   color: darkorange;
   font-size: 16px;
-  background: linear-gradient(transparent 75%, #ffe6ff 75%);
+  background: linear-gradient(transparent 75%, #ffe8cc 75%);
 }
 .hitokoto1 {
-  background: linear-gradient(transparent 75%, #ffe6ff 75%);
+  background: linear-gradient(transparent 75%, #ffe8cc 75%);
 }
 .sokutei {
   margin-left: 40%;
@@ -118,14 +118,14 @@ ul.index_list {
     padding: 0px 3px;
     font-size: 12px;
     text-decoration: none;
-    color: #008cff;
-    border: solid 2px #008cff;
+    color: #00fff2;
+    border: solid 2px #00fff2;
     border-radius: 3px;
     transition: .4s;
 }
 
 .square_btn_sm:hover {
-    background: #008cff;
+    background: #00fff2;
     color: white;
 }
 
