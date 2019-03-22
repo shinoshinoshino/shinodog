@@ -1,18 +1,18 @@
 class MedicinesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
-    @medicines = Medicine.all.order(created_at: 'desc')
+    @medicines = current_user.medicines.all.order(created_at: 'desc')
   end
 
   def new
-    @medicine = Medicine.new
-    @profiles = Profile.all
+    @medicine = current_user.medicines.new
+    @profiles = current_user.profiles.all
   end
 
   def create
-    @medicine = Medicine.new(medicine_params)
-    @profiles = Profile.all
+    @medicine = current_user.medicines.new(medicine_params)
+    @profiles = current_user.profiles.all
     if @medicine.save
       redirect_to medicines_path
     else
@@ -21,27 +21,27 @@ class MedicinesController < ApplicationController
   end
 
   def destroy
-    @medicine = Medicine.find(params[:id])
-    @profiles = Profile.all
+    @medicine = current_user.medicines.find(params[:id])
+    @profiles = current_user.profiles.all
     @medicine.destroy
     redirect_to medicines_path
   end
 
   def edit
-    @medicine = Medicine.find(params[:id])
-    @profiles = Profile.all
+    @medicine = current_user.medicines.find(params[:id])
+    @profiles = current_user.profiles.all
   end
 
   def update
-    @medicine = Medicine.find(params[:id])
-    @profiles = Profile.all
+    @medicine = current_user.medicines.find(params[:id])
+    @profiles = current_user.profiles.all
     @medicine.update(medicine_params)
     redirect_to medicines_path
   end
 
   private
     def medicine_params
-      params.require(:medicine).permit(:drug, :date, :name, :profile_id)
+      params.require(:medicine).permit(:drug, :date, :name, :profile_id :user_id)
     end
 
 end
