@@ -7,12 +7,12 @@ class PostsController < ApplicationController
 
   def new
     @post = current_user.posts.new
-    @profiles = Profile.all
+    @profiles = current_user.plofiles.all
   end
 
   def create
     @post = current_user.posts.new(post_params)
-    @profiles = Profile.all
+    @profiles = current_user.plofiles.all
     if @post.save
       redirect_to posts_path
     else
