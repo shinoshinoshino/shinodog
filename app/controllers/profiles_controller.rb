@@ -2,30 +2,30 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @profiles = Profile.all
+    @profiles = current_user.profiles.all
   end
 
   def new
   end
 
   def create
-    @profile = Profile.new(profile_params)
+    @profile = current_user.profiles.new(profile_params)
     @profile.save
     redirect_to profiles_path
   end
 
   def destroy
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profiles.find(params[:id])
     @profile.destroy
     redirect_to profiles_path
   end
 
   def edit
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profiles.find(params[:id])
   end
 
   def update
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profiles.find(params[:id])
     @profile.update(profile_params)
     redirect_to profiles_path
   end
