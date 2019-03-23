@@ -39,3 +39,33 @@
 li {
   list-style-type: none;
 }
+
+.btn-primary-f {
+  display: inline-block;
+  width: 200px;
+  padding: 0.3em 3em;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  border: solid 2px #6b7a8f;
+  background: #6b7a8f;
+  border-radius: 3px;
+  transition: .4s;
+ }
+
+.btn-primary-f:hover {
+    background: white;
+    color: #6b7a8f;
+}
+
+.header_main {
+  text-align: left;
+}
+.header_main a {
+  color: #f7882f;
+  font-size: 28px;
+  text-align: left;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
