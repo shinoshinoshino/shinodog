@@ -103,7 +103,23 @@
     background: white;
     color: #008cff;
 }
+.btn-primary-f {
+  display: inline-block;
+  width: 200px;
+  padding: 0.3em 3em;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  border: solid 2px #6b7a8f;
+  background: #6b7a8f;
+  border-radius: 3px;
+  transition: .4s;
+ }
 
+.btn-primary-f:hover {
+    background: white;
+    color: #6b7a8f;
+}
 h3,p {
   color: #663800;
 }
