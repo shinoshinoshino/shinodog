@@ -8,26 +8,26 @@
   margin: 0px;
   padding: 0px;
   justify-content: flex-end;
-  background-color: #ffba66;
+  background-color: #efaa52;
 }
 
 .signup, .login {
   display: inline;
   float: right;
-  background-color: #ffba66;
+  background-color: #efaa52;
 }
 
 .signup a {
-  color: #008cff;
+  color: #1683ab;
   text-decoration: none;
 }
 
 .header_grobal li:hover {
-  background-color: darkorange;
+  background-color: #efaa52;
 }
 
 .header_grobal a:hover {
-  color: #008cff;
+  color: #1683ab;
 }
 
 .header_grobal span {
@@ -40,7 +40,7 @@
 }
 
 .login a {
-  color:  #008cff;
+  color:  #1683ab;
   text-decoration: none;
   padding-left: 0px;
   padding-right: 24.4px;
@@ -50,7 +50,7 @@
   text-align: left;
 }
 .header_main a {
-  color: #f7882f;
+  color: #ab3e16;
   font-size: 28px;
   text-align: left;
   padding-top: 5px;
@@ -68,7 +68,7 @@
 }
 
 .return a {
-  color: #008cff;
+  color: #1683ab;
   text-decoration: none;
 }
 
@@ -77,12 +77,12 @@
 }
 
 .field {
-  color: #663800;
+  color: #48120e;
 }
 
 .form-control {
   width: 300px;
-  border: 1px solid darkorange;
+  border: 1px solid #efaa52;
   border-radius: 10px;
   height: 30px;
 }
@@ -93,15 +93,15 @@
   font-size: 15px;
   text-decoration: none;
   color: white;
-  border: solid 2px #008cff;
-  background: #008cff;
+  border: solid 2px #1683ab;
+  background: #1683ab;
   border-radius: 3px;
   transition: .4s;
  }
 
 .btn-primary:hover {
     background: white;
-    color: #008cff;
+    color: #1683ab;
 }
 
 .btn-primary-f {
@@ -111,34 +111,29 @@
   font-size: 15px;
   text-decoration: none;
   color: white;
-  border: solid 2px #6b7a8f;
-  background: #6b7a8f;
+  border: solid 2px #1683ab;
+  background: #1683ab;
   border-radius: 3px;
   transition: .4s;
  }
 
 .btn-primary-f:hover {
     background: white;
-    color: #6b7a8f;
+    color: #1683ab;
 }
 h3,p {
-  color: #663800;
+  color: #48120e;
 }
 
 .header_lead {
-  color: darkorange;
+  color: #efaa52;
   font-size: 22px;
-  background: linear-gradient(transparent 75%, #ffe6ff 75%);
-}
-
-hr {
-  border: 0.5px solid darkorange;
 }
 
 .header_log {
-  background-color: #fffcf9;
+  background-color: #f8f3e6;
   background-position: center;
-  border: 2px solid darkorange;
+  border: 2px solid #efaa52;
   margin: 0 auto;
   margin-top: 35px;
   margin-bottom: 70px;
@@ -162,7 +157,7 @@ hr {
   margin: 15px auto;
   padding: 5px;
   background-color: white;
-  border: solid 1px darkorange;
+  border: solid 1px #efaa52;
   border-radius: 4px;
 }
 
@@ -171,7 +166,7 @@ hr {
   display: block;
   width: 100%;
   height: 100%;
-  color:  #008cff;
+  color:  #1683ab;
   text-align: center;
   vertical-align: middle;
   font-size: 17px;
@@ -179,17 +174,17 @@ hr {
 }
 
 .header_show li:hover {
-  background-color: #fff7ef;
+  background-color: #f8f3e6;
 }
 
 .header_heading {
-  color: #663800;
+  color: #48120e;
   font-size: 20px;
   max-width: 700px;
   line-height: 60px;
   margin: 0 auto;
-  border-bottom: 2px solid darkorange;
-  border-top: 2px solid darkorange;
+  border-bottom: 2px solid #efaa52;
+  border-top: 2px solid #efaa52;
 }
 
 .header_point {
@@ -204,8 +199,8 @@ hr {
   margin: 15px auto;
   padding: 5px;
   text-align: left;
-  background-color: #e6e6e6;
-  border: solid 1px #e6e6e6;
+  background-color: #f8f3e6;
+  border: solid 1px #f8f3e6;
   border-radius: 4px;
 }
 
@@ -214,7 +209,7 @@ hr {
 }
 .header_point span {
   display: inline-block;
-  color: #663800;
+  color: #48120e;
   text-decoration: none;
   line-height: 28px;
   text-align: left;
